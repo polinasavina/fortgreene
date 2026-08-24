@@ -44,7 +44,6 @@
     textarea {
       width: 100%;
       min-height: 180px;
-
       padding: 16px;
 
       font-family: inherit;
@@ -105,16 +104,32 @@
         required
       ></textarea>
 
+      <!-- Email subject -->
       <input
         type="hidden"
         name="_subject"
         value="New question from UNDERPAID website"
       >
 
+      <!-- Redirect to our own thank-you page -->
+      <input
+        type="hidden"
+        name="_next"
+        value="https://polinasavina.github.io/fortgreene/thanks.html"
+      >
+
+      <!-- Disable FormSubmit captcha -->
       <input
         type="hidden"
         name="_captcha"
         value="false"
+      >
+
+      <!-- Honeypot spam protection -->
+      <input
+        type="text"
+        name="_honey"
+        style="display:none"
       >
 
       <button type="submit">
